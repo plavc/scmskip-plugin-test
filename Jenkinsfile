@@ -11,9 +11,14 @@ pipeline {
                 echo "Hello... 23432332fff f ff f f"
             }
         }
+        stage('Lint') {
+            steps {
+                echo "Test "
+            }
+        }
         stage('Test') {
             steps {
-                echo "Test"
+                echo "Test "
             }
         }
     }
