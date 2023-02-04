@@ -26,5 +26,10 @@ pipeline {
                 echo "Docker Lint"
             }
         }
+        stage('Docker: Push') {
+            steps {
+                echo "Docker Push"
+            }
+        }
     }
 }
