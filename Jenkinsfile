@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    properties {
+    options {
         scmSkipBuild(enabled: true, deleteBuild: true)
         
     }
