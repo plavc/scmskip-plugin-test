@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     options {
-        scmSkipOptions(enabled: true, deleteBuild: false, manuallyTriggered: true)
+        scmSkipOptions(enabled: true, deleteBuild: false, manuallyTriggered: true, abortType: 'KILL')
     }
 
     stages {
