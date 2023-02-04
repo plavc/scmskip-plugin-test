@@ -13,12 +13,12 @@ pipeline {
         }
         stage('Lint') {
             steps {
-                echo "Test "
+                echo "Lint"
             }
         }
         stage('Test') {
             steps {
-                echo "Test "
+                echo "Test"
             }
         }
     }
