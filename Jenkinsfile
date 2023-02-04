@@ -1,10 +1,15 @@
 pipeline {
     agent any
 
+    properties {
+        scmSkipBuild(enabled: true, deleteBuild: true)
+        
+    }
+
     stages {
         stage('Build') {
             steps {
-                scmSkip2(disabled: false, matchAllCommits: true, deleteBuild: false)
+                scmSkip2(enabled: true, matchAllCommits: true, deleteBuild: false)
             }
         }
     }
