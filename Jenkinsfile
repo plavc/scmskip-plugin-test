@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     options {
-        scmSkipOptions(enabled: true, deleteBuild: false, manuallyTriggered: true, abortType: 'INTERRUPT')
+        scmSkipOptions(enabled: true, deleteBuild: false, manuallyTriggered: true, abortType: 'STOP')
     }
 
     stages {
-        stage('Build') {
+        stage('Prepare') {
             steps {
-                echo "Hello... 23432332fff f ff f f"
+                echo "Prepare"
             }
         }
         stage('Lint') {
@@ -19,6 +19,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Test"
+            }
+        }
+        stage('Docker: Lint') {
+            steps {
+                echo "Docker Lint"
             }
         }
     }
