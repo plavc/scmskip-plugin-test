@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                scmSkip(disabled: false)
+                scmSkip(disabled: false, matchAllCommits: true, deleteBuild: true)
             }
         }
     }
