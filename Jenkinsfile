@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                scmSkip2(enabled: true, matchAllCommits: true, deleteBuild: false)
+                scmSkip2(enabled: true, deleteBuild: false)
             }
         }
     }
