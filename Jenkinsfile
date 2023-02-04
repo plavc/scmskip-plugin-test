@@ -5,6 +5,10 @@ pipeline {
         scmSkipOptions()
     }
 
+    environment {
+        TEST = "Test"
+    }
+
     stages {
         stage('Prepare') {
             steps {
