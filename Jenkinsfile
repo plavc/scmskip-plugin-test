@@ -9,7 +9,6 @@ pipeline {
         TEST = "Test"
     }
 
-
     stages {
         stage('Prepare') {
             steps {
