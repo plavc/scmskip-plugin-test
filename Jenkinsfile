@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    //options {
-        //scmSkipBuild(enabled: true, deleteBuild: true, manuallyTriggered: true)
-    //}
+    options {
+        scmSkip(deleteBuild: true, manuallyTriggered: true)
+    }
 
     environment {
         TEST = "Test"
