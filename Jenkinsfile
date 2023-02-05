@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     options {
-        scmSkipBuild(enabled: true, deleteBuild: true, manuallyTriggered: true)
+        //scmSkipBuild(enabled: true, deleteBuild: true, manuallyTriggered: true)
     }
 
     environment {
@@ -14,6 +14,7 @@ pipeline {
         stage('Prepare') {
             steps {
                 echo "Prepare"
+                scmSkip(enabled: true, deleteBuild: true, manuallyTriggered: true)
             }
         }
         stage('Lint') {
