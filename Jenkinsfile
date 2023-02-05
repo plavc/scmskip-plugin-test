@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     options {
-        scmSkipOptions()
+        scmSkipBuild(enabled: true)
     }
 
     environment {
